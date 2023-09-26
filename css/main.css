@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr: #4071ed;
+}
+
+input[disabled] {
+    caret-color: transparent;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--clr);
+    font-family: 'Cairo', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-wrapper {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 60px;
+}
+
+.otp-wrapper .header {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    caret-color: transparent;
+}
+
+.otp-wrapper .header .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #fff;
+    background-color: var(--clr);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-wrapper .header .title {
+    color: #32373a;
+    margin-bottom: 20px;
+}
+
+.otp-wrapper>form .otp-inputs {
+    width: fit-content;
+    margin: auto;
+}
+
+.otp-wrapper>form .otp-inputs input {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: text;
+    transition: box-shadow 400ms;
+}
+
+.otp-wrapper>form .otp-inputs input::-webkit-inner-spin-button,
+.otp-wrapper>form .otp-inputs input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.otp-wrapper>form .otp-inputs input:focus {
+    box-shadow: 0px 1px 2px rgb(0 0 0/.1);
+}
+
+.otp-wrapper>form .otp-inputs input:not(:last-child) {
+    margin-right: 10px;
+}
+
+.otp-wrapper>form .verify-btn {
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: var(--clr);
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity 400ms;
+    caret-color: transparent;
+    pointer-events: none;
+}
+
+.otp-wrapper>form .verify-btn.active {
+    pointer-events: auto;
+    opacity: .7;
+}
+
+.otp-wrapper>form .verify-btn:hover {
+    opacity: 1;
+}
